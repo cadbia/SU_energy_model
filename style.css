@@ -14,15 +14,90 @@ body{
     position: relative;
     box-shadow: 0 0 8px 8px #d9d9d9 inset;
 }
+
 #top_building{
-    max-width: 10%;
     height: auto;
     position: absolute;
-    border-style: dotted;
-    border-color: hotpink;
-    top: 76%;
-    left: 14%;
+    /* border-style: dotted;
+    border-color: hotpink; */
+    opacity: 30%;
+    background-color: #FBD148;
+    transform: rotate(-12.5deg);
+    height: 3.3%;
+    width: 7.85%;
+    top: 79.5%;
+    left: 14.9%;
 }
-#top_building:hover{
-    filter: sepia(100%);
+#bottom_building{
+    position: absolute;
+    transform: rotate(-12.6deg);
+    height: 3.5%;
+    width: 8.1%;
+    top: 82.8%;
+    left: 23.2%;
+    opacity: 30%;
+    background-color: #FBD148;
 }
+#bottom_building:hover,#top_building:hover{
+    opacity: 50%;
+    background-color: #B2EA70;
+}
+#popup1, #popup2{
+    position: absolute;
+    display: none;
+    background-color: #F9975D;
+    border-radius: 30%;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    height: 30%;
+    width:  30%;
+    border-radius: 20%;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 3vmin;
+    top: 48%;
+    left:24%;
+}
+
+#popup1::after, #popup2::after{
+    background-color: #F9975D;
+    content: "\00a0";
+    display: block;
+    height: 17%;
+    width: 10%;
+    left: 10%;
+    position: absolute;
+    top: 87%;
+    transform:             rotate(45deg );
+        -moz-transform:    rotate( 45deg );
+        -ms-transform:     rotate( 45deg );
+        -o-transform:      rotate( 45deg );
+        -webkit-transform: rotate( 45deg );
+}
+#popup1:before, #popup2::before{
+    background-color: #F9975D;
+    content: "\00a0";
+    display: block;
+    height: 17%;
+    width: 15%;
+    left: 0%;
+    position: absolute;
+    top: 81%;
+   
+}
+#top_building:hover + #popup1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color:white;
+}
+#bottom_building:hover + #popup2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color:white;
+}
+/* Color pallette https://colorhunt.co/palette/c85c5cf9975dfbd148b2ea70 */
