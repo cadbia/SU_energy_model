@@ -1,0 +1,28 @@
+body{
+    background-color: #d9d9d9;
+}
+.south_campus_img{
+    display:flex; 
+    position: relative;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+#main_img{
+    max-width: 75%;
+    position: relative;
+    box-shadow: 0 0 8px 8px #d9d9d9 inset;
+}
+#top_building{
+    max-width: 10%;
+    height: auto;
+    position: absolute;
+    border-style: dotted;
+    border-color: hotpink;
+    top: 76%;
+    left: 14%;
+}
+#top_building:hover{
+    filter: sepia(100%);
+}
