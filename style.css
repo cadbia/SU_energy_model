@@ -30,6 +30,7 @@ body{
     width: 7.85%;
     top: 79.5%;
     left: 14.9%;
+    z-index: 1;
 }
 #bottom_building{
     position: absolute;
@@ -40,10 +41,11 @@ body{
     left: 23.2%;
     opacity: 30%;
     background-color: #FBD148;
+    z-index: 1;
 }
 #bottom_building:hover,#top_building:hover{
     opacity: 50%;
-    background-color: #B2EA70;
+    background-color: #B2EA70 !important;
 }
 #popup1, #popup2{
     position: absolute;
@@ -126,7 +128,7 @@ tr:nth-child(even) {
     top:35%;
     background-color: #B2EA70;
 }
-#bef_but, #aft_but {
+button {
     position: absolute;
     align-items: center;
     appearance: none;
@@ -154,24 +156,23 @@ tr:nth-child(even) {
     white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 2vmax;
+    z-index: 1;
 }
-#bef_but:focus, #aft_but:focus {
+button:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
-#bef_but:hover, #aft_but:hover {
+button:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
-
 button:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
-#circle1{
-    top: -4%;
-    left:7.8%;
+svg{
     position: absolute;
     opacity: 80%;
+    z-index: 0;
 }
 
 /* Color pallette https://colorhunt.co/palette/c85c5cf9975dfbd148b2ea70 */
