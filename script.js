@@ -26,17 +26,31 @@ function updateSizes(table1, table2, befBut, aftBut){
 }
 let isAfter = false;
 function before(){
-    const circle1 = document.getElementById("circle1");
-        if(isAfter === true){
-            isAfter = false;
-            circle1.setAttribute("fill", "#F9975D");
+    var slides = document.getElementsByClassName("circle");
+    if(isAfter === true){
+        isAfter = false;
+        for (var i = 0; i < slides.length; i++) {
+            if(slides.item(i).getAttribute("fill") == "url('#myGradientAftExcellent')"){
+                slides.item(i).setAttribute("fill", "url('#myGradientBefMild')");
+            }
+            else{
+                slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
+            }
         }
+    }
 }
 function after(){
-    const circle1 = document.getElementById("circle1");
+    var slides = document.getElementsByClassName("circle");
     if(isAfter === false){
         isAfter = true;
-        circle1.setAttribute("fill", "#B2EA70");
+        for (var i = 0; i < slides.length; i++) {
+            if(slides.item(i).getAttribute("fill") == "url('#myGradientBefMild')"){
+                slides.item(i).setAttribute("fill", "url('#myGradientAftExcellent')");
+            }
+            else{
+                slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
+            }
+        }
     }
 }
 
@@ -48,5 +62,6 @@ addEventListener('load', () => {
     updateSizes(table1,table2,befBut,aftBut)
     setInterval(updateSizes(table1,table2,befBut,aftBut), 500);
 });
+
 
 

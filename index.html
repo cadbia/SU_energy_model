@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    
     <div class= "south_campus_img">
         <img id= "main_img" src= "/Users/caden/SU_Work/SU_energy_model/zoomed_south_campus.jpg">
         <div id= "top_building"></div>
@@ -62,12 +63,108 @@
         </div>
         <button id= "bef_but" onclick="before()">Before Retrofit</button>
         <button id= "aft_but" onclick="after()">After Retrofit</button>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="100%" height="100%">
-            <circle id="circle1" cx="-30" cy="30" fill="#F9975D">
-                <animate attributeName="r" values="2.5%; 5%; 10%; 2.4%;" dur="7s" repeatCount="indefinite" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="75.2%" height="100%">
+            <defs>
+                <radialGradient id="myGradientBefMild">
+                  <stop offset="10%" stop-color="#FBD148" />
+                  <stop offset="95%" stop-color="#F9975D" />
+                </radialGradient>
+                <radialGradient id="myGradientBefPoor">
+                    <stop offset="10%" stop-color="#FBD148" />
+                    <stop offset="70%" stop-color="#C85C5C" />
+                  </radialGradient>
+                <radialGradient id="myGradientAftGood">
+                    <stop offset="10%" stop-color="rgb(178, 234, 255)" />
+                    <stop offset="95%" stop-color="#FBD148" />
+                </radialGradient>
+                <radialGradient id="myGradientAftExcellent">
+                    <stop offset="10%" stop-color="rgb(178, 234, 255)" />
+                    <stop offset="95%" stop-color="#B2EA70" />
+                </radialGradient>
+              </defs>
+            <circle class= "circle" id="circle1" cx="-30" cy="30" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2%; 4%; 13%; 1.9%;" dur="9s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle2" cx="60" cy="25" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.5%; 5%; 15%; 2.4%;" dur="11s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle3" cx="93" cy="13" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="1.5%; 3%; 11%; 1.4%;" dur="7s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle4" cx="250" cy="20" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="4.8%; 9.6%; 23.2%; 4.7%;" dur="14.2s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle5" cx="-21" cy="54" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="1.6%; 3.2%; 11.4%; 1.5%;" dur="7.4s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle6" cx="39" cy="51" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.5%; 5%; 15%; 2.4%;" dur="11s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle7" cx="85" cy="61" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.5%; 5%; 15%; 2.4%;" dur="11s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle8" cx="142" cy="76" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.2%; 4.4%; 13.8%; 2.1%;" dur="9.8s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle9" cx="43" cy="86" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="1.5%; 3%; 11%; 1.4%;" dur="7s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle10" cx="90" cy="81" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.7%; 5.4%; 15.8%; 2.6%;" dur="11.8s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle11" cx="57" cy="104" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2%; 4%; 13%; 1.9%;" dur="9s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle12" cx="57" cy="104" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2%; 4%; 13%; 1.9%;" dur="9s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle13" cx="149" cy="118" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.5%; 5%; 15%; 2.4%;" dur="11s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle14" cx="-17" cy="145" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.4%; 4.8%; 14.6%; 2.3%;" dur="10.6s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle15" cx="36" cy="139" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.3%; 4.6%; 14.2%; 2.2%;" dur="10.2s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle16" cx="107" cy="147" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.9%; 5.8%; 16.6%; 2.8%;" dur="12.6s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle17" cx="180" cy="159" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.2%; 4.4%; 13.8%; 2.1%;" dur="9.8s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle18" cx="270" cy="140" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="10s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle19" cx="-18" cy="202" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.9s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle20" cx="21" cy="211" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.3s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle21" cx="96" cy="174" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.1s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle22" cx="154" cy="173" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.6s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle23" cx="240" cy="184" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.5s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle24" cx="282" cy="203" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="2.75%; 5.5%; 16%; 2.65%;" dur="12s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle25" cx="146" cy="197" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="8.9s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle26" cx="120" cy="224" fill= "url('#myGradientBefMild')">
+                <animate attributeName="r" values="2.25%; 4.5%; 14%; 2.15%;" dur="9.2s" repeatCount="indefinite" />
+            </circle>
+            <circle class= "circle" id="circle24" cx="188" cy="229" fill= "url('#myGradientBefPoor')">
+                <animate attributeName="r" values="3.25%; 6.3%; 12.6%; 3.15%;" dur="8.6s" repeatCount="indefinite" />
             </circle>
         </svg>
-        
+        <img id= "EUI" src= "/Users/caden/SU_Work/SU_energy_model/EUI_bar.png">
     </div>
    
 </body>

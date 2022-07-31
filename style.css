@@ -19,10 +19,7 @@ body{
 }
 
 #top_building{
-    height: auto;
     position: absolute;
-    /* border-style: dotted;
-    border-color: hotpink; */
     opacity: 30%;
     background-color: #FBD148;
     transform: rotate(-12.5deg);
@@ -61,6 +58,7 @@ body{
     font-size: 3vmin;
     top: 48%;
     left:24%;
+    z-index: 3;
 }
 table{
     font-family: arial, sans-serif;
@@ -174,5 +172,16 @@ svg{
     opacity: 80%;
     z-index: 0;
 }
+#EUI{
+    position: absolute;
+    height: 4%;
+    top:90%;
+    left: 12.5%;
+    z-index: 3;
+}
 
-/* Color pallette https://colorhunt.co/palette/c85c5cf9975dfbd148b2ea70 */
+
+/* Color pallettes
+https://colorhunt.co/palette/c85c5cf9975dfbd148b2ea70 
+https://www.color-hex.com/color-palette/6393 (Skip #b4e1fd)
+https://www.color-hex.com/color-palette/28118 (Skip #f6bd60)*/
