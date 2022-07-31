@@ -179,6 +179,13 @@ svg{
     left: 12.4%;
     z-index: 3;
 }
+#authors{
+    position: absolute;
+    height: 3%;
+    top:98%;
+    right: 0%;
+    z-index: 3;
+}
 
 
 /* Color pallettes
