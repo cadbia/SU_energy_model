@@ -1,9 +1,10 @@
 body{
     background-color: #d9d9d9;
     width: 130%;
+    overflow: hidden;
 }
 .south_campus_img{
-    left: calc(100vw/-6);
+    left: calc(100vw/-6.3);
     display:flex; 
     position: relative;
     margin: auto;
