@@ -20,8 +20,8 @@ body{
 
 #top_building{
     position: absolute;
-    opacity: 30%;
-    background-color: #FBD148;
+    opacity: 70%;
+    background-color: greenyellow;
     transform: rotate(-12.5deg);
     height: 3.3%;
     width: 7.85%;
@@ -36,13 +36,13 @@ body{
     width: 8.1%;
     top: 82.8%;
     left: 23.2%;
-    opacity: 30%;
-    background-color: #FBD148;
+    opacity: 70%;
+    background-color: greenyellow;
     z-index: 1;
 }
 #bottom_building:hover,#top_building:hover{
     opacity: 50%;
-    background-color: #B2EA70 !important;
+    background-color: #B2EA70;
 }
 #popup1, #popup2{
     position: absolute;
