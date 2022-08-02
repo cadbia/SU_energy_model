@@ -41,6 +41,23 @@ function after(){
         }
     }
 }
+addEventListener('load', () => {
+    const hiddenEl = document.getElementById('popup');
+    const poly26 = document.getElementById('polygon26');
+    const poly27 = document.getElementById('polygon27');
+    poly26.addEventListener('mouseover', function handleMouseOver() {
+        hiddenEl.style.display = 'flex';
+    });
+    poly27.addEventListener('mouseover', function handleMouseOver() {
+        hiddenEl.style.display = 'flex';
+    });
+    poly26.addEventListener('mouseout', function handleMouseOut() {
+        hiddenEl.style.display = 'none';
+    });
+    poly27.addEventListener('mouseout', function handleMouseOut() {
+        hiddenEl.style.display = 'none';
+    });
+});
 
 // addEventListener('load', () => {
 //     const table1 = document.getElementById("table1");
@@ -64,6 +81,4 @@ function after(){
 // document.getElementById("svgDoc").addEventListener("mousedown", alert_coords, false);
 
 // });
-
-
 

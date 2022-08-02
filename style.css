@@ -21,33 +21,17 @@ body{
     margin: 0 auto;
 }
 
-#top_building{
-    position: absolute;
-    opacity: 60%;
-    background-color: purple;
-    transform: rotate(-12.5deg);
-    height: 3.3%;
-    width: 7.85%;
-    top: 79.5%;
-    left: 14.9%;
-    z-index: 1;
-}
-#bottom_building{
-    position: absolute;
-    transform: rotate(-12.6deg);
-    height: 3.5%;
-    width: 8.1%;
-    top: 82.8%;
-    left: 23.2%;
-    opacity: 60%;
-    background-color: purple;
-    z-index: 1;
-}
-#bottom_building:hover,#top_building:hover{
+#polygon26:hover, #polygon27:hover{
+    cursor: pointer;
     opacity: 50%;
     background-color: rgb(190, 96, 190);
 }
-#popup1, #popup2{
+#popup{
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color:white;
     position: absolute;
     display: none;
     background-color: #F9975D;
@@ -67,22 +51,22 @@ table{
     position: absolute;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    font-size: 50%;
+    font-size: 55%;
     left: 10%;
-    height: 80%;
+    height: 79%;
     width: 80%;
     z-index: 3;
 }
 td, th {
     border: 1px solid black;
     text-align: left;
-    padding: 0.5px;
+    padding: 0.2px;
     
 }
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-#popup1::after, #popup2::after{
+#popup::after{
     background-color: #F9975D;
     content: "\00a0";
     display: block;
@@ -97,7 +81,7 @@ tr:nth-child(even) {
         -o-transform:      rotate( 45deg );
         -webkit-transform: rotate( 45deg );
 }
-#popup1:before, #popup2::before{
+#popup:before{
     background-color: #F9975D;
     content: "\00a0";
     display: block;
@@ -106,22 +90,6 @@ tr:nth-child(even) {
     left: 0%;
     position: absolute;
     top: 81%;
-}
-#top_building:hover + #popup1{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    color:white;
-}
-#bottom_building:hover + #popup2{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    color:white;
 }
 #bef_but{
     height: 6.35%;
