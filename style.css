@@ -48,7 +48,6 @@ body{
     z-index: 3;
 }
 table{
-    visibility: hidden;
     position: absolute;
     font-family: arial, sans-serif;
     border-collapse: collapse;

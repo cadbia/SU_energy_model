@@ -48,19 +48,16 @@ addEventListener('load', () => {
     const poly27 = document.getElementById('polygon27');
     poly26.addEventListener('mouseover', function handleMouseOver() {
         hiddenEl.style.display = 'flex';
-        table.style.visibility= 'visible';
+        table.style.display = 'visible';
     });
     poly27.addEventListener('mouseover', function handleMouseOver() {
         hiddenEl.style.display = 'flex';
-        table.style.visibility= 'visible';
     });
     poly26.addEventListener('mouseout', function handleMouseOut() {
         hiddenEl.style.display = 'none';
-        table.style.visibility= 'hidden';
     });
     poly27.addEventListener('mouseout', function handleMouseOut() {
         hiddenEl.style.display = 'none';
-        table.style.visibility= 'hidden';
     });
 });
 
