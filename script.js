@@ -1,7 +1,7 @@
 function updateSizes(table1, table2){
     if(window.innerWidth >= window.innerHeight*2){
-        table1.style.fontSize = "2vmin";
-        table2.style.fontSize = "2vmin"
+        table1.style.fontSize = "1.6vmin";
+        table2.style.fontSize = "1.6vmin"
     }
     else if(window.innerWidth <= window.innerHeight){
         table1.style.fontSize = "0.8vmin";
@@ -42,12 +42,13 @@ function after(){
     }
 }
 
-// addEventListener('load', () => {
-//     const table1 = document.getElementById("table1");
-//     const table2 = document.getElementById("table2");
-//     updateSizes(table1,table2)
-//     setInterval(updateSizes(table1,table2), 500);
-// });
+addEventListener('load', () => {
+    const table1 = document.getElementById("table1");
+    const table2 = document.getElementById("table2");
+    updateSizes(table1,table2)
+    setInterval(updateSizes(table1,table2), 500);
+});
+
 // addEventListener('load', () => {
 // var pt = document.getElementById("svgDoc").createSVGPoint();
 
