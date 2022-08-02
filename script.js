@@ -1,32 +1,20 @@
-function updateSizes(table1, table2, befBut, aftBut){
+function updateSizes(table1, table2){
     if(window.innerWidth >= window.innerHeight*2){
         table1.style.fontSize = "2vmin";
-        table2.style.fontSize = "2vmin";
-        befBut.style.fontSize = "3vmin";
-        aftBut.style.fontSize = "3vmin";
-        befBut.style.height = "10vmin";
-        aftBut.style.height = "10vmin";
+        table2.style.fontSize = "2vmin"
     }
     else if(window.innerWidth <= window.innerHeight){
         table1.style.fontSize = "0.8vmin";
         table2.style.fontSize = "0.8vmin";
-        befBut.style.fontSize = "2vmin";
-        aftBut.style.fontSize = "2vmin";
-        befBut.style.height = "5vmin";
-        aftBut.style.height = "5vmin";
     }
     else{
         table1.style.fontSize = "1.2vmax";
         table2.style.fontSize = "1.2vmax";
-        befBut.style.fontSize = "2vmax";
-        aftBut.style.fontSize = "2vmax";
-        befBut.style.height = "5.5vmax";
-        aftBut.style.height = "5.5vmax";
     }
 }
 let isAfter = false;
 function before(){
-    var slides = document.getElementsByClassName("circle");
+    var slides = document.getElementsByClassName("rectangle");
     if(isAfter === true){
         isAfter = false;
         for (var i = 0; i < slides.length; i++) {
@@ -40,7 +28,7 @@ function before(){
     }
 }
 function after(){
-    var slides = document.getElementsByClassName("circle");
+    var slides = document.getElementsByClassName("rectangle");
     if(isAfter === false){
         isAfter = true;
         for (var i = 0; i < slides.length; i++) {
@@ -54,14 +42,27 @@ function after(){
     }
 }
 
-addEventListener('load', () => {
-    const table1 = document.getElementById("table1");
-    const table2 = document.getElementById("table2");
-    const befBut = document.getElementById("bef_but");
-    const aftBut = document.getElementById("aft_but");
-    updateSizes(table1,table2,befBut,aftBut)
-    setInterval(updateSizes(table1,table2,befBut,aftBut), 500);
-});
+// addEventListener('load', () => {
+//     const table1 = document.getElementById("table1");
+//     const table2 = document.getElementById("table2");
+//     updateSizes(table1,table2)
+//     setInterval(updateSizes(table1,table2), 500);
+// });
+// addEventListener('load', () => {
+// var pt = document.getElementById("svgDoc").createSVGPoint();
+
+// function alert_coords(evt) {
+//     pt.x = evt.clientX;
+//     pt.y = evt.clientY;
+
+//     // The cursor point, translated into svg coordinates
+//     var cursorpt =  pt.matrixTransform(document.getElementById("svgDoc").getScreenCTM().inverse());
+//     console.log("(" + cursorpt.x.toFixed(1) + ", " + cursorpt.y.toFixed(1) + ")");
+// }
+
+// document.getElementById("svgDoc").addEventListener("mousedown", alert_coords, false);
+
+// });
 
 
 

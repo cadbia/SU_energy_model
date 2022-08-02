@@ -4,15 +4,15 @@ body{
     overflow: hidden;
 }
 .south_campus_img{
-    left: calc(100vw/-6.3);
+    left: calc(100vw/-6);
     display:flex; 
     position: relative;
     margin: auto;
     justify-content: center;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     min-width: 70vmin; 
-    max-width: 170vmin;
+    max-width: 160vmin;
 }
 #main_img{
     max-width: 75%;
@@ -23,8 +23,8 @@ body{
 
 #top_building{
     position: absolute;
-    opacity: 70%;
-    background-color: greenyellow;
+    opacity: 60%;
+    background-color: purple;
     transform: rotate(-12.5deg);
     height: 3.3%;
     width: 7.85%;
@@ -39,13 +39,13 @@ body{
     width: 8.1%;
     top: 82.8%;
     left: 23.2%;
-    opacity: 70%;
-    background-color: greenyellow;
+    opacity: 60%;
+    background-color: purple;
     z-index: 1;
 }
 #bottom_building:hover,#top_building:hover{
     opacity: 50%;
-    background-color: #B2EA70;
+    background-color: rgb(190, 96, 190);
 }
 #popup1, #popup2{
     position: absolute;
@@ -120,13 +120,17 @@ tr:nth-child(even) {
     color:white;
 }
 #bef_but{
-    right:20%;
-    top:23%;
+    height: 6.35%;
+    width: 15%;
+    left: 12.4%;
+    top:-7.5%;
     background-color: #C85C5C;
 }
 #aft_but{
-    right:15%;
-    top:35%;
+    height: 6.35%;
+    width: 15%;
+    left: 28%;
+    top:-7.5%;
     background-color: #B2EA70;
 }
 button {
@@ -140,8 +144,7 @@ button {
     color: black;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
-    height: 5.5vmax;
+    font-family: arial;
     justify-content: center;
     line-height: 1;
     list-style: none;
@@ -156,7 +159,7 @@ button {
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
-    font-size: 2vmax;
+    font-size: 2.5vmin;
     z-index: 1;
 }
 button:focus {
@@ -172,9 +175,10 @@ button:active {
 }
 svg{
     position: absolute;
-    opacity: 80%;
+    opacity: 100%;
     z-index: 0;
 }
+
 #EUI{
     position: absolute;
     height: 6.35%;
@@ -189,6 +193,7 @@ svg{
     right: 12.2%;
     z-index: 3;
 }
+
 
 
 /* Color pallettes
