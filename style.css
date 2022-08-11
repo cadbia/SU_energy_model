@@ -3,6 +3,7 @@ body{
     width: 130%;
     overflow: hidden;
 }
+
 .south_campus_img{
     left: calc(100vw/-6);
     display:flex; 
@@ -43,8 +44,8 @@ body{
     text-align: center;
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 3vmin;
-    top: 48%;
-    left:24%;
+    top:44%;
+    left:23%;
     z-index: 3;
 }
 table{
@@ -161,9 +162,10 @@ svg{
 #authors{
     position: absolute;
     height: 3%;
-    top:98%;
+    top:97.5%;
     right: 12.2%;
     z-index: 3;
+    filter: invert(1);
 }
 
 
