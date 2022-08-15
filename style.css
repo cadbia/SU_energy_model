@@ -94,17 +94,31 @@ tr:nth-child(even) {
 }
 #bef_but{
     height: 6.35%;
-    width: 15%;
+    width: 14.5%;
     left: 12.4%;
     top:-7.5%;
     background-color: #C85C5C;
 }
 #aft_but{
     height: 6.35%;
-    width: 15%;
-    left: 28%;
+    width: 14.5%;
+    left: 27.9%;
     top:-7.5%;
     background-color: #B2EA70;
+}
+#EUI_but{
+    height: 6.35%;
+    width: 15%;
+    left: 44%;
+    top:-7.5%;
+    background-color: #FBD148;
+}
+#comfort_but{
+    height: 6.35%;
+    width: 15%;
+    left: 60%;
+    top:-7.5%;
+    background-color: #f2c7c0;
 }
 button {
     position: absolute;
@@ -152,12 +166,20 @@ svg{
     z-index: 0;
 }
 
-#EUI{
+#EUI_bar{
     position: absolute;
     height: 6.35%;
     top:-0.5%;
     left: 12.4%;
     z-index: 3;
+}
+#comfort_bar{
+    position: absolute;
+    height: 6.20%;
+    top:-0.5%;
+    left: 12.4%;
+    z-index: 3;
+    display: hidden;
 }
 #authors{
     position: absolute;

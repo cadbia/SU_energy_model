@@ -12,10 +12,11 @@
 //         table2.style.fontSize = "1.1vmax";
 //     }
 // }
+let mode = "EUI";
 let isAfter = false;
 function before(){
     var slides = document.getElementsByClassName("rectangle");
-    if(isAfter === true){
+    if(isAfter === true && mode === "EUI"){
         isAfter = false;
         for (var i = 0; i < slides.length; i++) {
             if(slides.item(i).getAttribute("fill") == "url('#myGradientAftExcellent')"){
@@ -29,7 +30,7 @@ function before(){
 }
 function after(){
     var slides = document.getElementsByClassName("rectangle");
-    if(isAfter === false){
+    if(isAfter === false && mode === "EUI"){
         isAfter = true;
         for (var i = 0; i < slides.length; i++) {
             if(slides.item(i).getAttribute("fill") == "url('#myGradientBefMild')"){
@@ -41,6 +42,34 @@ function after(){
         }
     }
 }
+function comfort(){
+    var slides = document.getElementsByClassName("rectangle");
+    var euiBar = document.getElementById("EUI_bar");
+    var comfortBar = document.getElementById("comfort_bar");
+    if (mode != "comfort"){
+        mode = "comfort";
+        euiBar.style.display = "none";
+        comfortBar.style.display = "block";
+        for (var i = 0; i < slides.length; i++) {
+            slides.item(i).style.display = "none";   
+        }
+    }
+}
+function eui(){
+    var slides = document.getElementsByClassName("rectangle");
+    var euiBar = document.getElementById("EUI_bar");
+    var comfortBar = document.getElementById("comfort_bar");
+    if (mode != "EUI"){
+        console.log("eui");
+        mode = "EUI";
+        euiBar.style.display = "block";
+        comfortBar.style.display = "hidden";
+        for (var i = 0; i < slides.length; i++) {
+            slides.item(i).style.display = "block";   
+        }
+    }
+}
+
 addEventListener('load', () => {
     const hiddenEl = document.getElementById('popup');
     const table = document.getElementById('table');
@@ -77,9 +106,3 @@ document.getElementById("svgDoc").addEventListener("mousedown", alert_coords, fa
 
 });
 
-// addEventListener('load', () => {
-//     const table1 = document.getElementById("table1");
-//     const table2 = document.getElementById("table2");
-//     updateSizes(table1,table2)
-//     setInterval(updateSizes(table1,table2), 500);
-// });

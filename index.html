@@ -4,6 +4,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Data Visulization</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript" src = "script.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -36,6 +37,8 @@
         </div>
         <button id= "bef_but" onclick="before()">Before Retrofit</button>
         <button id= "aft_but" onclick="after()">After Retrofit</button>
+        <button id= "comfort_but" onclick="comfort()">Comfort</button>
+        <button id= "EUI_but" onclick="eui()">Energy Use Intensity</button>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="75.2%" height="100%" id = "svgDoc">
             <defs>
                 <radialGradient id="myGradientBefMild">
@@ -108,8 +111,8 @@
               <!-- <polygon class= "rectangle" id = "polygon26" points= "-34.8, 210.6 -36.5, 202.9 -1.7, 194.9 0.4, 202.9 " fill = "url('#myGradientBefMild')" /> -->
               <!-- <polygon class= "rectangle" id = "polygon27" points= "1.6, 211.4 36.4, 203.4 39.8, 211.4 3.8, 219.9  " fill = "url('#myGradientBefMild')" /> -->
             </svg>
-        
-        <img id= "EUI" src= "https://i.imgur.com/2uD2K8V.png">
+        <img id= "comfort_bar" src= "https://i.imgur.com/8LBVnZ8.png">
+        <img id= "EUI_bar" src= "https://i.imgur.com/2uD2K8V.png">
         <img id= "authors" src= "https://i.imgur.com/ict4JOe.png">
     </div>
    
