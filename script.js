@@ -15,48 +15,87 @@
 let mode = "EUI";
 let isAfter = false;
 function before(){
+    var aftBut = document.getElementById("aft_but");
+    var befBut = document.getElementById("bef_but");
+    befBut.style.color = "white";
+    aftBut.style.color = "black";
     var slides = document.getElementsByClassName("rectangle");
     if(isAfter === true && mode === "EUI"){
         isAfter = false;
-        for (var i = 0; i < slides.length; i++) {
-            if(slides.item(i).getAttribute("fill") == "url('#myGradientAftExcellent')"){
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
                 slides.item(i).setAttribute("fill", "url('#myGradientBefMild')");
-            }
-            else{
-                slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
-            }
+        }
+    }
+    if(isAfter === true && mode === "comfort"){
+        isAfter = false;
+        for (var i = 0; i < slides.length; i++) {
+                slides.item(i).setAttribute("fill", "url('#comfortBefPoor')");
         }
     }
 }
 function after(){
+    var aftBut = document.getElementById("aft_but");
+    var befBut = document.getElementById("bef_but");
+    befBut.style.color = "black";
+    aftBut.style.color = "white";
     var slides = document.getElementsByClassName("rectangle");
     if(isAfter === false && mode === "EUI"){
         isAfter = true;
-        for (var i = 0; i < slides.length; i++) {
-            if(slides.item(i).getAttribute("fill") == "url('#myGradientBefMild')"){
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
                 slides.item(i).setAttribute("fill", "url('#myGradientAftExcellent')");
-            }
-            else{
-                slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
-            }
         }
     }
+    if(isAfter === false && mode === "comfort"){
+        isAfter = true;
+        for (var i = 0; i < slides.length; i++) {
+                slides.item(i).setAttribute("fill", "url('#comfortAftExcellent')");
+        }
+    }
+    
 }
 function comfort(){
+    var euiBut = document.getElementById("EUI_but");
+    var comfortBut = document.getElementById("comfort_but");
+    comfortBut.style.color = "white";
+    euiBut.style.color = "black";
     var slides = document.getElementsByClassName("rectangle");
+    var aftBut = document.getElementById("aft_but");
+    var befBut = document.getElementById("bef_but");
     var euiBar = document.getElementById("EUI_bar");
     var comfortBar = document.getElementById("comfort_bar");
     if (mode != "comfort"){
         mode = "comfort";
         euiBar.style.display = "none";
         comfortBar.style.display = "block";
+        befBut.style.backgroundColor = "#ee817f";
+        aftBut.style.backgroundColor = "#f4e9dd";
+    }
+    if(isAfter === false){
         for (var i = 0; i < slides.length; i++) {
-            slides.item(i).style.display = "none";   
+            slides.item(i).setAttribute("fill", "url('#comfortBefPoor')");
         }
     }
+    else{
+        for (var i = 0; i < slides.length; i++) {
+            slides.item(i).setAttribute("fill", "url('#comfortAftExcellent')");
+        }
+    }
+    
 }
 function eui(){
+    var euiBut = document.getElementById("EUI_but");
+    var comfortBut = document.getElementById("comfort_but");
+    comfortBut.style.color = "black";
+    euiBut.style.color = "white";
     var slides = document.getElementsByClassName("rectangle");
+    var aftBut = document.getElementById("aft_but");
+    var befBut = document.getElementById("bef_but");
     var euiBar = document.getElementById("EUI_bar");
     var comfortBar = document.getElementById("comfort_bar");
     if (mode != "EUI"){
@@ -64,8 +103,23 @@ function eui(){
         mode = "EUI";
         euiBar.style.display = "block";
         comfortBar.style.display = "hidden";
-        for (var i = 0; i < slides.length; i++) {
-            slides.item(i).style.display = "block";   
+        befBut.style.backgroundColor = "#C85C5C";
+        aftBut.style.backgroundColor = "#B2EA70";
+    }
+    if(isAfter === false){
+       for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#myGradientBefMild')");
+        } 
+    }
+    else{
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#myGradientAftExcellent')");
         }
     }
 }
@@ -73,19 +127,19 @@ function eui(){
 addEventListener('load', () => {
     const hiddenEl = document.getElementById('popup');
     const table = document.getElementById('table');
+    const poly25 = document.getElementById('polygon25');
     const poly26 = document.getElementById('polygon26');
-    const poly27 = document.getElementById('polygon27');
-    poly26.addEventListener('mouseover', function handleMouseOver() {
+    poly25.addEventListener('mouseover', function handleMouseOver() {
         hiddenEl.style.display = 'flex';
         table.style.display = 'visible';
     });
-    poly27.addEventListener('mouseover', function handleMouseOver() {
+    poly26.addEventListener('mouseover', function handleMouseOver() {
         hiddenEl.style.display = 'flex';
     });
-    poly26.addEventListener('mouseout', function handleMouseOut() {
+    poly25.addEventListener('mouseout', function handleMouseOut() {
         hiddenEl.style.display = 'none';
     });
-    poly27.addEventListener('mouseout', function handleMouseOut() {
+    poly26.addEventListener('mouseout', function handleMouseOut() {
         hiddenEl.style.display = 'none';
     });
 });
