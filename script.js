@@ -16,11 +16,11 @@ let mode = "EUI";
 let isAfter = false;
 function before(){
     var aftBut = document.getElementById("aft_but");
-    var befBut = document.getElementById("bef_but");
-    befBut.style.color = "white";
+    var befBut = document.getElementById("bef_but")
     aftBut.style.color = "black";
     var slides = document.getElementsByClassName("rectangle");
     if(isAfter === true && mode === "EUI"){
+        befBut.style.color = "#B2EA70";
         isAfter = false;
         for (var i = 0; i < slides.length-16; i++) {
             slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
@@ -30,6 +30,7 @@ function before(){
         }
     }
     if(isAfter === true && mode === "comfort"){
+        befBut.style.color = "#f4e9dd";
         isAfter = false;
         for (var i = 0; i < slides.length; i++) {
                 slides.item(i).setAttribute("fill", "url('#comfortBefPoor')");
@@ -40,9 +41,9 @@ function after(){
     var aftBut = document.getElementById("aft_but");
     var befBut = document.getElementById("bef_but");
     befBut.style.color = "black";
-    aftBut.style.color = "white";
     var slides = document.getElementsByClassName("rectangle");
     if(isAfter === false && mode === "EUI"){
+        aftBut.style.color = "#C85C5C";
         isAfter = true;
         for (var i = 0; i < slides.length-16; i++) {
             slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
@@ -52,6 +53,7 @@ function after(){
         }
     }
     if(isAfter === false && mode === "comfort"){
+        aftBut.style.color = "#C85C5C";
         isAfter = true;
         for (var i = 0; i < slides.length; i++) {
                 slides.item(i).setAttribute("fill", "url('#comfortAftExcellent')");
