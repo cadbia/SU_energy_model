@@ -79,11 +79,13 @@ function comfort(){
         aftBut.style.backgroundColor = "#f4e9dd";
     }
     if(isAfter === false){
+        befBut.style.color = "#f4e9dd";
         for (var i = 0; i < slides.length; i++) {
             slides.item(i).setAttribute("fill", "url('#comfortBefPoor')");
         }
     }
     else{
+        aftBut.style.color = "#C85C5C";
         for (var i = 0; i < slides.length; i++) {
             slides.item(i).setAttribute("fill", "url('#comfortAftExcellent')");
         }
