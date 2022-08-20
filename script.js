@@ -111,6 +111,7 @@ function eui(){
         aftBut.style.backgroundColor = "#B2EA70";
     }
     if(isAfter === false){
+    befBut.style.color = "#B2EA70";
        for (var i = 0; i < slides.length-16; i++) {
             slides.item(i).setAttribute("fill", "url('#myGradientBefPoor')");
             }
@@ -119,6 +120,7 @@ function eui(){
         } 
     }
     else{
+        aftBut.style.color = "#C85C5C";
         for (var i = 0; i < slides.length-16; i++) {
             slides.item(i).setAttribute("fill", "url('#myGradientAftGood')");
             }
