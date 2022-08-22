@@ -36,6 +36,10 @@ function before(){
                 slides.item(i).setAttribute("fill", "url('#comfortBefPoor')");
         }
     }
+    if(isAfter === true && mode === "IAQ"){
+        befBut.style.color = "#c2eaf6";
+        isAfter = false;
+    }
 }
 function after(){
     var aftBut = document.getElementById("aft_but");
@@ -59,11 +63,17 @@ function after(){
                 slides.item(i).setAttribute("fill", "url('#comfortAftExcellent')");
         }
     }
+    if(isAfter === false && mode === "IAQ"){
+        aftBut.style.color = "#ccc0bb";
+        isAfter = true;
+    }
     
 }
 function comfort(){
     var euiBut = document.getElementById("EUI_but");
     var comfortBut = document.getElementById("comfort_but");
+    var aiqBut = document.getElementById("IAQ_but");
+    aiqBut.style.color = "black";
     comfortBut.style.color = "white";
     euiBut.style.color = "black";
     var slides = document.getElementsByClassName("rectangle");
@@ -71,8 +81,10 @@ function comfort(){
     var befBut = document.getElementById("bef_but");
     var euiBar = document.getElementById("EUI_bar");
     var comfortBar = document.getElementById("comfort_bar");
+    var iaqBar = document.getElementById("IAQ_bar");
     if (mode != "comfort"){
         mode = "comfort";
+        iaqBar.style.display = "none";
         euiBar.style.display = "none";
         comfortBar.style.display = "block";
         befBut.style.backgroundColor = "#ee817f";
@@ -95,6 +107,8 @@ function comfort(){
 function eui(){
     var euiBut = document.getElementById("EUI_but");
     var comfortBut = document.getElementById("comfort_but");
+    var aiqBut = document.getElementById("IAQ_but");
+    aiqBut.style.color = "black";
     comfortBut.style.color = "black";
     euiBut.style.color = "white";
     var slides = document.getElementsByClassName("rectangle");
@@ -102,11 +116,12 @@ function eui(){
     var befBut = document.getElementById("bef_but");
     var euiBar = document.getElementById("EUI_bar");
     var comfortBar = document.getElementById("comfort_bar");
+    var iaqBar = document.getElementById("IAQ_bar");
     if (mode != "EUI"){
-        console.log("eui");
         mode = "EUI";
+        iaqBar.style.display = "none";
         euiBar.style.display = "block";
-        comfortBar.style.display = "hidden";
+        comfortBar.style.display = "none";
         befBut.style.backgroundColor = "#C85C5C";
         aftBut.style.backgroundColor = "#B2EA70";
     }
@@ -128,6 +143,35 @@ function eui(){
                 slides.item(i).setAttribute("fill", "url('#myGradientAftExcellent')");
         }
     }
+}
+function iaq(){
+    var iaqBut = document.getElementById("IAQ_but");
+    var euiBut = document.getElementById("EUI_but");
+    var comfortBut = document.getElementById("comfort_but");
+    iaqBut.style.color = "white";
+    comfortBut.style.color = "black";
+    euiBut.style.color = "white";
+    var slides = document.getElementsByClassName("rectangle");
+    var aftBut = document.getElementById("aft_but");
+    var befBut = document.getElementById("bef_but");
+    var euiBar = document.getElementById("EUI_bar");
+    var comfortBar = document.getElementById("comfort_bar");
+    var iaqBar = document.getElementById("IAQ_bar");
+    if (mode != "IAQ"){
+        mode = "IAQ";
+        iaqBar.style.display = "block";
+        euiBar.style.display = "none";
+        comfortBar.style.display = "none";
+        befBut.style.backgroundColor = "#ccc0bb";
+        aftBut.style.backgroundColor = "#c2eaf6";
+    }
+    if(isAfter === false){
+        befBut.style.color = "#c2eaf6";
+    }
+    else{
+        aftBut.style.color = "#ccc0bb";
+    }
+    
 }
 
 addEventListener('load', () => {
