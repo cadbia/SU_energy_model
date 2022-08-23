@@ -39,6 +39,12 @@ function before(){
     if(isAfter === true && mode === "IAQ"){
         befBut.style.color = "#c2eaf6";
         isAfter = false;
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#iaqBefMild')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#iaqBefPoor')");
+        }
     }
 }
 function after(){
@@ -66,6 +72,12 @@ function after(){
     if(isAfter === false && mode === "IAQ"){
         aftBut.style.color = "#ccc0bb";
         isAfter = true;
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#iaqAftExcellent')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#iaqAftGood')");
+        }
     }
     
 }
@@ -167,46 +179,70 @@ function iaq(){
     }
     if(isAfter === false){
         befBut.style.color = "#c2eaf6";
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#iaqBefMild')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#iaqBefPoor')");
+        }
     }
     else{
         aftBut.style.color = "#ccc0bb";
+        for (var i = 0; i < slides.length-16; i++) {
+            slides.item(i).setAttribute("fill", "url('#iaqAftExcellent')");
+            }
+        for (var i = 10; i < slides.length; i++) {       
+                slides.item(i).setAttribute("fill", "url('#iaqAftGood')");
+        }
     }
     
 }
 
 addEventListener('load', () => {
+
     const hiddenEl = document.getElementById('popup');
     const table = document.getElementById('table');
     const poly25 = document.getElementById('polygon25');
     const poly26 = document.getElementById('polygon26');
-    poly25.addEventListener('mouseover', function handleMouseOver() {
-        hiddenEl.style.display = 'flex';
-        table.style.display = 'visible';
-    });
-    poly26.addEventListener('mouseover', function handleMouseOver() {
-        hiddenEl.style.display = 'flex';
-    });
-    poly25.addEventListener('mouseout', function handleMouseOut() {
-        hiddenEl.style.display = 'none';
-    });
-    poly26.addEventListener('mouseout', function handleMouseOut() {
-        hiddenEl.style.display = 'none';
-    });
+
+    const slides = document.getElementsByClassName('rectangle');
+
+    for (const slide of slides) {
+        slide.addEventListener('mouseover', function handleMouseOver(){
+            hiddenEl.style.display = 'flex';
+        });
+        slide.addEventListener('mouseout', function handleMouseOut(){
+            hiddenEl.style.display = 'none';
+        });
+    }
+
+    // poly25.addEventListener('mouseover', function handleMouseOver() {
+    //     hiddenEl.style.display = 'flex';
+    // });
+    // poly26.addEventListener('mouseover', function handleMouseOver() {
+    //     hiddenEl.style.display = 'flex';
+    // });
+    // poly25.addEventListener('mouseout', function handleMouseOut() {
+    //     hiddenEl.style.display = 'none';
+    // });
+    // poly26.addEventListener('mouseout', function handleMouseOut() {
+    //     hiddenEl.style.display = 'none';
+    // });
 });
 
-addEventListener('load', () => {
-var pt = document.getElementById("svgDoc").createSVGPoint();
+// addEventListener('load', () => {
+// var pt = document.getElementById("svgDoc").createSVGPoint();
 
-function alert_coords(evt) {
-    pt.x = evt.clientX;
-    pt.y = evt.clientY;
+// function alert_coords(evt) {
+//     pt.x = evt.clientX;
+//     pt.y = evt.clientY;
 
-    // The cursor point, translated into svg coordinates
-    var cursorpt =  pt.matrixTransform(document.getElementById("svgDoc").getScreenCTM().inverse());
-    console.log("(" + cursorpt.x.toFixed(1) + ", " + cursorpt.y.toFixed(1) + ")");
-}
+//     // The cursor point, translated into svg coordinates
+//     var cursorpt =  pt.matrixTransform(document.getElementById("svgDoc").getScreenCTM().inverse());
+//     console.log("(" + cursorpt.x.toFixed(1) + ", " + cursorpt.y.toFixed(1) + ")");
+// }
 
-document.getElementById("svgDoc").addEventListener("mousedown", alert_coords, false);
+// document.getElementById("svgDoc").addEventListener("mousedown", alert_coords, false);
 
-});
+// });
 

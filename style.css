@@ -22,10 +22,9 @@ body{
     margin: 0 auto;
 }
 
-#polygon26:hover, #polygon27:hover{
+.rectangle:hover{
     cursor: pointer;
     opacity: 50%;
-    background-color: rgb(190, 96, 190);
 }
 #popup{
     position: absolute;
@@ -38,20 +37,27 @@ body{
     background-color: #F9975D;
     border-radius: 30%;
     box-shadow: 0px 0px 6px #B2B2B2;
-    height: 30%;
-    width:  30%;
-    border-radius: 20%;
+    /* height: 30%;
+    width:  30%; */
+    height: 28%;
+    width:  28%;
+    /* border-radius: 20%; */
+    border-radius: 10%;
     text-align: center;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 3vmin;
-    top:44%;
-    left:23%;
+    /* font-size: 3vmin; */
+    font-size: 2.8vmin;
+    /* top:44%;
+    left:23%; */
+    top:20%;
+    left:58.5%;
     z-index: 3;
 }
 table{
     position: absolute;
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    /* font-size: 55%; */
     font-size: 55%;
     left: 10%;
     height: 79%;
@@ -67,7 +73,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-#popup::after{
+/* #popup::after{
     background-color: #F9975D;
     content: "\00a0";
     display: block;
@@ -91,7 +97,7 @@ tr:nth-child(even) {
     left: 0%;
     position: absolute;
     top: 81%;
-}
+} */
 #bef_but{
     color:#B2EA70;
     height: 6.35%;
