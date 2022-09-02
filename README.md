@@ -34,7 +34,7 @@ style.css
 --> Class and id are used to select which HTML elements are being styled 
 
 
-composer.json, index.php, and Procfile
+composer.json and index.php
 
 --> signal that this site should be hosted as a PHP project
 --> This is required because this site does not contain a backend 
