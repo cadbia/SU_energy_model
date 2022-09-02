@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class= "south_campus_img">
+        <!-- Google maps image of south casmpus -->
         <img id= "main_img" src= "https://i.imgur.com/YZGJcWE.png">
+        <!-- popup that contains table, appears on hover -->
         <div id="popup">
             <table id = "table">
                 <tr>
@@ -35,12 +37,15 @@
                 </tr>
             </table>
         </div>
+        <!-- All buttons at top and the text they contain, onclick point to js functions  -->
         <button id= "bef_but" onclick="before()">Before Retrofit</button>
         <button id= "aft_but" onclick="after()">After Retrofit</button>
         <button id= "comfort_but" onclick="comfort()">Comfort</button>
         <button id= "IAQ_but" onclick="iaq()">Indoor Air Quality</button>
         <button id= "EUI_but" onclick="eui()">Energy Use Intensity</button>
+        <!-- SVG canvas -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="75.2%" height="100%" id = "svgDoc">
+            <!-- definitions of patterns that can be used to fill SVGs -->
             <defs>
                 <pattern id="iaqAftExcellent" patternUnits="userSpaceOnUse" width="40" height="40">
                     <image href="https://gistcdn.githack.com/cadbia/83002c87eb4445786e214573749daf64/raw/53372c09f29494b7d6254689ba28962d59e4c23b/iaqAftExcellent.svg" x="0" y="0" width="40" height="40" />
@@ -60,7 +65,7 @@
                 <pattern id="comfortAftExcellent" patternUnits="userSpaceOnUse" width="104" height="25">
                     <image href="https://gistcdn.githack.com/cadbia/bced74a0549570ea13c69f073e14caa2/raw/0faed7cdfb4208156b3c32f03764b4e25939d8d7/comfortAftExcellent.svg" x="0" y="0" width="104" height="25" />
                 </pattern>
-             
+                <!-- EUI animated gradient def -->
                 <radialGradient id="myGradientBefMild">
                     <stop offset="0" stop-color="#F9975D">
                     </stop>
@@ -97,10 +102,10 @@
                         repeatCount="indefinite" />
                     </stop>
                     <stop offset="1" stop-color="#B2EA70"/>
-                   
                 </radialGradient>
               </defs>
-              
+              <!-- SVG polygon declaratoions 
+              Each def corresponds to points that form a specic building outline -->
               <polygon class= "rectangle" id = "polygon1" points= "61.5, 18.4 63.1, 16.3 66.2, 18.9 66.2, 19.9 87.2, 26.8 91.4, 29.9 95.1, 24.1 65.2, 13.6" fill = "url('#myGradientBefPoor')" />
               <polygon class= "rectangle" id = "polygon2" points= "39.9, 39.3 43.7, 34.9 75.2, 46.9 70.8, 51.3" fill = "url('#myGradientBefPoor')" />
               <polygon class= "rectangle" id = "polygon3" points= "75.2, 53.8 113.1, 46.2 115.0, 51.3 78.4, 58.2" fill = "url('#myGradientBefPoor')" />
@@ -111,7 +116,7 @@
               <polygon class= "rectangle" id = "polygon8" points= "82.8, 138.1 113.1, 132.7 113.5, 133.6 128.4, 130.4 130.7, 138.1 115.8, 141.2 114.9, 139.4 84.2, 145.3" fill = "url('#myGradientBefPoor'" />
               <polygon class= "rectangle" id = "polygon9" points= "269.7, 185.0 281.0, 185.5 288.7, 214.8 287.8, 217.5 290.9, 231.1 279.2, 231.1 276.0, 215.7 277.4, 215.7 276.9, 214.4" fill = "url('#myGradientBefPoor')" />
               <polygon class= "rectangle" id = "polygon10" points= "153.7, 231.5 188.9, 226.5 189.8, 227.9 207.4, 226.1 210.6, 236.5 196.1, 238.7 195.7, 237.8 194.8, 237.4 193.9, 236.9 193.0, 237.4 192.5, 237.4 192.1, 238.7 190.3, 238.7 189.4, 237.8 188.0, 236.5 187.1, 235.6 185.3, 235.6 184.4, 235.6 183.1, 236.5 181.7, 237.8 180.8, 238.7 179.9, 239.2 178.1, 239.2 176.3, 239.6 174.5, 240.1 173.6, 241.0 172.2, 241.0 168.6, 241.4 167.3, 241.4 166.4, 240.5 165.0, 240.1 163.2, 239.6 161.4, 239.6 160.9, 238.7 159.6, 238.7 158.7, 238.7 157.8, 238.3 157.3, 238.3 156.4, 238.3 154.6, 237.4 154.2, 236.5 154.2, 235.1" fill = "url('#myGradientBefPoor')" />
-              
+        
               <polygon class= "rectangle" id = "polygon11" points= "95.5, 212.5 104.1, 206.2 128.4, 228.8 119.9, 236.9 105.9, 224.3 105.9, 221.6 106.8, 220.7 105.9, 220.2 104.1, 218.0 101.4, 217.1 100.0, 217.1 99.1, 216.2" fill = "url('#myGradientBefMild')" />
               <polygon class= "rectangle" id = "polygon12" points= " 251.7, 137.2 277.4, 127.2 283.7, 134.5 261.6, 143.0 259.8, 141.7 258.4, 142.6 258.4, 143.5 258.4, 144.8 256.6, 143.9 256.2, 143.5" fill = "url('#myGradientBefMild')" />
               <polygon class= "rectangle" id = "polygon13" points= "228.2, 171.0 232.7, 170.6 234.1, 171.9 235.0, 171.9 236.3, 171.9 237.7, 171.5 239.0, 171.0 239.0, 171.5 244.0, 199.5 233.2, 199.0" fill = "url('#myGradientBefMild')" />
@@ -128,14 +133,12 @@
               <polygon class= "rectangle" id = "polygon24" points= "-4.7, 48.8 5.8, 33.6 13.7, 35.2 3.2, 50.4 " fill = "url('#myGradientBefMild')" />
               <polygon class= "rectangle" id = "polygon25" points= "-41.7, 186.8 -7.0, 180.0 -6.1, 189.1 -41.7, 195.4" fill = "url('#myGradientBefMild')" />
               <polygon class= "rectangle" id = "polygon26" points= "-4.7, 199.5 -1.6, 198.6 -0.2, 199.0 0.2, 199.0 1.1, 198.6 2.0, 198.1 3.0, 197.7 29.6, 192.7 30.9, 201.7 -4.3, 208.5" fill = "url('#myGradientBefMild')" />
-
-              
-              <!-- <polygon class= "rectangle" id = "polygon26" points= "-34.8, 210.6 -36.5, 202.9 -1.7, 194.9 0.4, 202.9 " fill = "url('#myGradientBefMild')" /> -->
-              <!-- <polygon class= "rectangle" id = "polygon27" points= "1.6, 211.4 36.4, 203.4 39.8, 211.4 3.8, 219.9  " fill = "url('#myGradientBefMild')" /> -->
             </svg>
+        <!-- Vis key bar images -->
         <img id= "IAQ_bar" src= "https://i.imgur.com/WE0LJVq.png">
         <img id= "comfort_bar" src= "https://i.imgur.com/8LBVnZ8.png">
         <img id= "EUI_bar" src= "https://i.imgur.com/2uD2K8V.png">
+        <!-- Author tag image -->
         <img id= "authors" src= "https://i.imgur.com/ict4JOe.png">
         
     </div>

@@ -73,31 +73,6 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-/* #popup::after{
-    background-color: #F9975D;
-    content: "\00a0";
-    display: block;
-    height: 17%;
-    width: 10%;
-    left: 10%;
-    position: absolute;
-    top: 87%;
-    transform:             rotate(45deg );
-        -moz-transform:    rotate( 45deg );
-        -ms-transform:     rotate( 45deg );
-        -o-transform:      rotate( 45deg );
-        -webkit-transform: rotate( 45deg );
-}
-#popup:before{
-    background-color: #F9975D;
-    content: "\00a0";
-    display: block;
-    height: 17%;
-    width: 15%;
-    left: 0%;
-    position: absolute;
-    top: 81%;
-} */
 #bef_but{
     color:#B2EA70;
     height: 6.35%;
@@ -219,4 +194,3 @@ svg{
 https://colorhunt.co/palette/c85c5cf9975dfbd148b2ea70 
 https://www.color-hex.com/color-palette/6393 (Skip #b4e1fd)
 https://www.color-hex.com/color-palette/28118 (Skip #f6bd60)*/
-/* particle animation https://loading.io/asset/593136 */
