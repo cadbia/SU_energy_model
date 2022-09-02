@@ -18,26 +18,34 @@ Below is an explanation of how each file contributes to the overall website.
 index.html
 
 --> Contains the structure of the webpage
+
 --> Responsible for the initial state of the webpage
+
 --> Contains Buttons, images, and SVG paths. Also contains links to stylesheet and JavaScript files 
 
 script.js
 
 --> Responsible for making the site responsive
+
 --> Functions are pointed to and executed by event listeners in HTML code or JS code
+
 --> Code can dynamically change the color, size, visibility, etc. of HTML elements
 
 style.css
 
 --> Responsible for initial style of elements withing HTML page
+
 --> Styling attributes can include color, size, visibility, etc.
+
 --> Class and id are used to select which HTML elements are being styled 
 
 
 composer.json and index.php
 
 --> signal that this site should be hosted as a PHP project
---> This is required because this site does not contain a backend 
+
+--> This is required because this site does not contain a backend
+ 
 --> These files DO NOT need to be edited
 
 This website can be easily hosted on Heroku when you are satisfied with your local changes and wish to push them to a public link.
